@@ -3,18 +3,17 @@
 
 <head>
     <title>Petite Vue</title>
-    <script src="https://unpkg.com/petite-vue" defer init></script>
 </head>
 
 <body>
-    <div v-scope="{count: 0}">
+    <div id="example">
         {{count}}
-        <button @click="count++">
-          Increment
-        </button>
+        <button @click="increment">Increment</button>
     </div>
 
-    <scriipt></scriipt>
+    <script type="module">
+        import { createApp } from "https://unpkg.com/petite-vue"; createApp({ count: 0, increment() { this.count++; } }).mount("#example");
+    </script>
 </body>
 
 </html>
